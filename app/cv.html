@@ -1,0 +1,124 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <script src="http://code.angularjs.org/1.0.5/angular.min.js"></script>
+    <script src="js/cv.js"></script>
+</head>
+<body>
+
+    <div ng-app="">
+      <div ng-controller="CurriculumCrtl">
+      
+        <form name="myForm">
+      
+          <label>Name:</label>
+          <input type="text" ng-model="form.name" required/><br/>
+          <label>Title:</label>
+          <input type="text" ng-model="form.title" size="33" required/><br/>         
+          <label>Summary:</label>
+          <input type="text" ng-model="form.summary"/>
+
+          <br/>
+          <br/>
+
+          <label>Experience:</label>
+          [ <a href="" ng-click="addExperience()">add</a> ]
+          <br/>
+          <br/>
+          <div ng-repeat="experience in form.experienceList">
+          <label>Company:</label>
+          <input type="text" ng-model="experience.company" required/>[ <a href="" ng-click="removeExperience(experience)">Eliminar</a> ]<br/>
+          
+          <label>Title:</label>
+          <input type="text" ng-model="experience.title" required/><br/>
+
+          <label>From:</label>
+          <select ng-model="experience.fromMonth" required>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+
+            <select ng-model="experience.fromYear" required>
+              <option>1995</option>
+              <option>1996</option>
+              <option>1997</option>
+              <option>1998</option>
+              <option>1999</option>
+              <option>2000</option>
+              <option>2001</option>
+              <option>2002</option>
+              <option>2003</option>
+              <option>2004</option>
+              <option>2005</option>
+              <option>2006</option>
+              <option>2007</option>
+              <option>2008</option>
+              <option>2009</option>
+              <option>2010</option>
+              <option>2011</option>
+              <option>2012</option>
+              <option>2013</option>              
+            </select>
+
+            <label>To:</label><select ng-model="experience.toMonth" required>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+
+            <select ng-model="experience.toYear" required>
+              <option>1995</option>
+              <option>1996</option>
+              <option>1997</option>
+              <option>1998</option>
+              <option>1999</option>
+              <option>2000</option>
+              <option>2001</option>
+              <option>2002</option>
+              <option>2003</option>
+              <option>2004</option>
+              <option>2005</option>
+              <option>2006</option>
+              <option>2007</option>
+              <option>2008</option>
+              <option>2009</option>
+              <option>2010</option>
+              <option>2011</option>
+              <option>2012</option>
+              <option>2013</option>              
+            </select><br/>
+
+
+            <input type="text" ng-model="experience.description" /><br/><br/>
+             
+             <br/><br/>
+          </div>
+        <button ng-click="cancel()" ng-disabled="isCancelDisabled()">Cancel</button>
+        <button ng-click="save()" ng-disabled="isSaveDisabled()">Save</button>
+      </form>
+      <hr/>
+      Debug View:
+      <pre>form={{form}}</pre>
+      </div>
+    </div>
+</body>
+</html>
