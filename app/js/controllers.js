@@ -25,7 +25,6 @@
                 toYear:2011,
                 description: 'Participe en el desarrollo de aplicaciones para el cliente CitBank'
               }
-
               ]
 
   };
@@ -82,7 +81,7 @@
   };
 
   $scope.isSaveDisabled = function() {
-    return $scope.myForm.$invalid || angular.equals(master, $scope.form);
+    return $scope.cvForm.$invalid || angular.equals(master, $scope.form);
   };
 
   $scope.cancel();

@@ -1,13 +1,13 @@
  
       
-        <form name="myForm">
+        <form name="cvForm">
       
           <label>Name:</label>
           <input type="text" ng-model="form.name" required/><br/>
           <label>Title:</label>
           <input type="text" ng-model="form.title" size="33" required/><br/>         
           <label>Summary:</label>
-          <input type="text" ng-model="form.summary"/>
+          <input type="text" ng-model="form.summary" size="200"/>
 
           <br/>
           <br/>
@@ -37,7 +37,7 @@
           <select ng-model="experience.toYear" ng-options="year as year for year in years" required>
           </select><br/>
   
-            <input type="text" ng-model="experience.description" /><br/><br/>
+            <input type="text" ng-model="experience.description" size="200" /><br/><br/>
              
              <br/><br/>
           </div>
