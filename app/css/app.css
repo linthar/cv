@@ -1,76 +1,49 @@
 /* app css stylesheet */
 
-
 body {
-  padding-top: 20px;
+  background: url('../img/bg.png') repeat scroll 0 0;
+  padding-top: 0;
 }
 
-/** Detail View **/
-	
-
-img.phone {
- float: left;
- border: 1px solid black;
- margin-right: 3em;
- margin-bottom: 2em;
- background-color: white;
- padding: 2em;
- height: 400px; 
- width: 400px;
- }
-
- ul.phone-thumbs {
-
-  margin: 0;
-  list-style: none;
- }
-
- ul.phone-thumbs li {
-  border: 1px solid black;
-  display: inline-block;
-  margin: 1em;
-  background-color: white;
-}
-ul.phone-thumbs img {
-  height: 100px;
-  width: 100px;
-  padding: 1em;
+input {
+	height: 30px !important;	
 }
 
- ul.specs {
-
-   clear: both;
-
-   margin: 0;
-
-   padding: 0;
-  list-style: none;
-
- }
-
- ul.specs > li{
-  display: inline-block;
-  width: 200px;
-  vertical-align: top;
+label {
+	display: block;
 }
 
- ul.specs > li > span{
-
-   font-weight: bold;
-
-   font-size: 1.2em;
-
- }
-
- ul.specs dt {
-font-weight: bold;
+.small-text {
+	font-size: 14px;
 }
 
 
-h1 {
- border-bottom: 1px solid gray;
+/**
+ * Layout
+ */
+.content {
+	background-color: white;
+    box-shadow: 0 1px 5px #777777;
 }
 
-ul.phone-thumbs img:hover {
- cursor: pointer;
+
+
+/**
+ * Edit form
+ */
+#editCvForm legend {
+	margin-bottom: 20px;	
+}
+
+#editCvForm legend i {
+	margin-right: 5px;
+    margin-top: 5px;
+}
+
+#editCvForm fieldset {
+	margin-top: 30px;	
+}
+
+#editCvForm label {
+	margin-top: 7px;	
 }

@@ -1,51 +1,61 @@
- 
-      
-        <form name="cvForm">
-      
-          <label>Name:</label>
-          <input type="text" ng-model="form.name" required/><br/>
-          <label>Title:</label>
-          <input type="text" ng-model="form.title" size="33" required/><br/>         
-          <label>Summary:</label>
-          <input type="text" ng-model="form.summary" size="200"/>
 
-          <br/>
-          <br/>
+<form name="cvForm" id="editCvForm" class="form-horizontal"> 
 
-          <label>Experience:</label>
-          [ <a href="" ng-click="addExperience()">add</a> ]
-          <br/>
-          <br/>
-          <div ng-repeat="experience in form.experienceList">
-          <label>Company:</label>
-          <input type="text" ng-model="experience.company" required/>[ <a href="" ng-click="removeExperience(experience)">Eliminar</a> ]<br/>
-          
-          <label>Title:</label>
-          <input type="text" ng-model="experience.title" required/><br/>
+	<fieldset>
+   		<legend><i class="icon-user"></i> Personal infomation</legend>
 
+   		<label>Name:</label>
+		<input type="text" ng-model="form.name" class="input-xxlarge" required/>
+	
+   		<label>Title:</label>
+   		<input type="text" ng-model="form.title" size="33" class="input-xxlarge" required/>  
+	    
+   		<label>Summary:</label>
+   		<input type="text" ng-model="form.summary" size="200" class="input-xxlarge" />
+   		
+   		<!-- img src="img/profile.jpg" width="140" height="140" class="img-rounded" /-->
+	</fieldset>
+    
+	<fieldset>
+   		<legend><i class="icon-fire"></i>Experience <span class="small-text">[ </span><a href="" ng-click="addExperience()" class="small-text">add</a><span class="small-text"> ]</span> </legend>
 
-          <label>From:</label>
-          <select ng-model="experience.fromMonth" ng-options="month.id as month.name for month in months" required>
-          </select>
-          <select ng-model="experience.fromYear" ng-options="year as year for year in years" required>
-          </select><br/>
-
-
-          <label>To:</label>
-          <select ng-model="experience.toMonth" ng-options="month.id as month.name for month in months" required>
-          </select>
-          <select ng-model="experience.toYear" ng-options="year as year for year in years" required>
-          </select><br/>
+	    <div ng-repeat="experience in form.experienceList">
+    		
+    		<div class="well" style="background-color:#FDFDFD; box-shadow:none">
+	    		<label>Company:</label>
+	    		<input type="text" ng-model="experience.company" class="input-xxlarge" required/>[ <a href="" ng-click="removeExperience(experience)">Eliminar</a> ]
+	    
+	    		<label>Title:</label>
+	    		<input type="text" ng-model="experience.title" class="input-xxlarge" required/>
+	
+			    <label>From:</label>
+	    		<select ng-model="experience.fromMonth" ng-options="month.id as month.name for month in months" required>
+	    		</select>
+	    		<select ng-model="experience.fromYear" ng-options="year as year for year in years" required>
+	    		</select>
+	
+	    		<label>To:</label>
+	    		<select ng-model="experience.toMonth" ng-options="month.id as month.name for month in months" required>
+	    		</select>
+	    		<select ng-model="experience.toYear" ng-options="year as year for year in years" required>
+	    		</select>
+	
+				<label>Work description:</label>
+	      		<input type="text" ng-model="experience.description" class="input-xxlarge" size="200" />
+      		</div>
+	    </div>
   
-            <input type="text" ng-model="experience.description" size="200" /><br/><br/>
-             
-             <br/><br/>
-          </div>
-        <button ng-click="cancel()" ng-disabled="isCancelDisabled()">Cancel</button>
-        <button ng-click="save()" ng-disabled="isSaveDisabled()">Save</button>
-      </form>
-      <hr/>
-      Debug View:
-      <pre>form={{form}}</pre>
+  		<hr/>
+ 		<button ng-click="cancel()" ng-disabled="isCancelDisabled()" class="btn">Cancel</button>
+  		<button ng-click="save()" ng-disabled="isSaveDisabled()" class="btn btn-primary">Save</button>
+  		
+  	</fieldset>
+</form>
+
+
+<hr/>
+
+Debug View:
+<pre>form={{form}}</pre>
 
 
