@@ -23,82 +23,20 @@
           <label>Title:</label>
           <input type="text" ng-model="experience.title" required/><br/>
 
+
           <label>From:</label>
-          <select ng-model="experience.fromMonth" required>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-              <option>05</option>
-              <option>06</option>
-              <option>07</option>
-              <option>08</option>
-              <option>09</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-            </select>
-
-            <select ng-model="experience.fromYear" required>
-              <option>1995</option>
-              <option>1996</option>
-              <option>1997</option>
-              <option>1998</option>
-              <option>1999</option>
-              <option>2000</option>
-              <option>2001</option>
-              <option>2002</option>
-              <option>2003</option>
-              <option>2004</option>
-              <option>2005</option>
-              <option>2006</option>
-              <option>2007</option>
-              <option>2008</option>
-              <option>2009</option>
-              <option>2010</option>
-              <option>2011</option>
-              <option>2012</option>
-              <option>2013</option>              
-            </select>
-
-            <label>To:</label><select ng-model="experience.toMonth" required>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-              <option>05</option>
-              <option>06</option>
-              <option>07</option>
-              <option>08</option>
-              <option>09</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-            </select>
-
-            <select ng-model="experience.toYear" required>
-              <option>1995</option>
-              <option>1996</option>
-              <option>1997</option>
-              <option>1998</option>
-              <option>1999</option>
-              <option>2000</option>
-              <option>2001</option>
-              <option>2002</option>
-              <option>2003</option>
-              <option>2004</option>
-              <option>2005</option>
-              <option>2006</option>
-              <option>2007</option>
-              <option>2008</option>
-              <option>2009</option>
-              <option>2010</option>
-              <option>2011</option>
-              <option>2012</option>
-              <option>2013</option>              
-            </select><br/>
+          <select ng-model="experience.fromMonth" ng-options="month.id as month.name for month in months" required>
+          </select>
+          <select ng-model="experience.fromYear" ng-options="year as year for year in years" required>
+          </select><br/>
 
 
+          <label>To:</label>
+          <select ng-model="experience.toMonth" ng-options="month.id as month.name for month in months" required>
+          </select>
+          <select ng-model="experience.toYear" ng-options="year as year for year in years" required>
+          </select><br/>
+  
             <input type="text" ng-model="experience.description" /><br/><br/>
              
              <br/><br/>
