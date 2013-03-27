@@ -6,7 +6,7 @@
 /**
  * Curriculum controller
  */
-function CurriculumCrtl($scope, $routeParams, $http, Cv) {
+function CurriculumCrtl($scope, $routeParams, $http, $location, Cv) {
  
   var master = {};
 
@@ -45,7 +45,7 @@ function CurriculumCrtl($scope, $routeParams, $http, Cv) {
 
   $scope.save = function() {
     master = $scope.form;
-    $scope.cancel();
+    $location.path('/cv');
   };
 
   $scope.addExperience = function() {
@@ -100,5 +100,7 @@ function ListCrtl($scope) {
                     { name : "Bart Griffin", username : "bartgriffin"},
                     { name : "Elena Gomez",  username : "elenagomez"}
                    ]
+
  }
+
 
