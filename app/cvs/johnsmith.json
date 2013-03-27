@@ -1,0 +1,24 @@
+{
+    "name": "John Smith",
+    "title": "Software Developer",
+    "summary": "Desarrollador semi senior con 5 años de experiencia en aplicaciones J2EE. ",
+
+ "experienceList":[{ "company":"Tecso", 
+                "title":"SSr Developer",
+                "fromMonth":8,
+                "fromYear":2011,
+                "toMonth":3,
+                "toYear":2013,
+                "description": "Participe en el desarrollo de aplicaciones para el cliente CitBank"
+              },
+
+              { "company":"IBM", 
+                "title":"Junior Developer",
+                "fromMonth":1,
+                "fromYear":2010,
+                "toMonth":8,
+                "toYear":2011,
+                "description": "Participe en el desarrollo de aplicaciones para el cliente CitBank"
+              }
+              ]
+}
