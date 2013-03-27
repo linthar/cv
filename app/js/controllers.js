@@ -78,7 +78,16 @@ function CurriculumCrtl($scope, $routeParams, $http) {
 /**
  * List controller
  */
- function ListCrtl() {
+ function ListCrtl($scope) {
 
+    $scope.users = [
+                    { name : "John Smith",    username : "johnsmith"},
+                    { name : "Pepe Gonzalez", username : "pepegonzalez"},
+                    { name : "Michael Smith", username : "michaelsmith"},
+                    { name : "Ralph Gonzalez", username : "ralphgonzalez"},
+                    { name : "Peter Gordon", username : "petergordon"},
+                    { name : "Bart Griffin", username : "bartgriffin"},
+                    { name : "Elena Gomez",  username : "elenagomez"}
+                   ]
  }
 
