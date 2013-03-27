@@ -10,4 +10,3 @@ angular.module('curriculum', ['cvServices']).config(['$routeProvider', function(
 
 		otherwise({redirectTo: '/cv'});
 }]);
-

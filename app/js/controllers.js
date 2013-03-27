@@ -6,7 +6,7 @@
 /**
  * Curriculum controller
  */
-function CurriculumCrtl($scope, $routeParams, $http) {
+function CurriculumCrtl($scope, $routeParams, $http, Cv) {
  
   var master = {};
 
@@ -24,19 +24,20 @@ function CurriculumCrtl($scope, $routeParams, $http) {
       {name: 'Noviembre', id: 11},
       {name: 'Diciembre', id: 12}];
 
-  var currentYear = new Date().getFullYear();
-  var years = [];
-  for(var i=currentYear;i>1990;i--) {
-    years.push(i);
-  }
-  $scope.years = years;
+  $scope.years = __getYears();
 
-  
+
   $http.get('cvs/' + $routeParams.username + '.json').success(function(data) {
       $scope.form = data;
       master = angular.copy(data);
   });
-  
+
+/*
+  var data = Cv.query(function () { 
+      $scope.form = data;
+      master = angular.copy(data);
+  });
+*/
 
   $scope.cancel = function() {
     $scope.form = angular.copy(master);
@@ -68,6 +69,16 @@ function CurriculumCrtl($scope, $routeParams, $http) {
     return $scope.cvForm.$invalid || angular.equals(master, $scope.form);
   };
 
+
+  function __getYears() {
+      var currentYear = new Date().getFullYear();
+      var years = [];
+      for(var i=currentYear;i>1990;i--) {
+        years.push(i);
+      }
+      return years;
+  }
+
   $scope.cancel();
 }
 
@@ -78,7 +89,7 @@ function CurriculumCrtl($scope, $routeParams, $http) {
 /**
  * List controller
  */
- function ListCrtl($scope) {
+function ListCrtl($scope) {
 
     $scope.users = [
                     { name : "John Smith",    username : "johnsmith"},

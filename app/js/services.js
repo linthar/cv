@@ -3,10 +3,9 @@
 /* Services */
  
 angular.module('cvServices', ['ngResource']).
-	factory('Cv', function($resource){
-  		return $resource('cvs/:username.json', {}, {
+	factory('Cv', function($resource, $routeParams){
+  		return $resource('cvs/' + $routeParams.username + '.json', {}, {
 
-    		query: {method:'GET', params:{username:'phones'}, isArray:true}
+    		query: {method:'GET', params:{username: $routeParams.username}, isArray:false}
   		});
 });
- 
