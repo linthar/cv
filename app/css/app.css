@@ -47,3 +47,13 @@ label {
 #editCvForm label {
 	margin-top: 7px;	
 }
+
+#editCvForm .img-profile {
+	width: 180px;
+	height: 180px;
+	border-radius: 110px;
+	border: 1px solid #ddd;
+	padding: 4px;
+	margin-right: 35px;
+	margin-top: 40px;
+}

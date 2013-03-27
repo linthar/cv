@@ -4,16 +4,19 @@
 	<fieldset>
    		<legend><i class="icon-user"></i> Personal infomation</legend>
 
+		<img src="img/profile.jpg" class="img-rounded pull-left img-profile" /-->
+   		
    		<label>Name:</label>
 		<input type="text" ng-model="form.name" class="input-xxlarge" required/>
-	
+		
    		<label>Title:</label>
    		<input type="text" ng-model="form.title" size="33" class="input-xxlarge" required/>  
-	    
+		    
    		<label>Summary:</label>
-   		<input type="text" ng-model="form.summary" size="200" class="input-xxlarge" />
-   		
-   		<!-- img src="img/profile.jpg" width="140" height="140" class="img-rounded" /-->
+		<textarea ng-model="form.summary" rows="4" cols="70" class="input-xxlarge">
+        </textarea>
+</textarea>
+
 	</fieldset>
     
 	<fieldset>
@@ -21,9 +24,11 @@
 
 	    <div ng-repeat="experience in form.experienceList">
     		
-    		<div class="well" style="background-color:#FDFDFD; box-shadow:none">
+    		<div class="well" style="background-color:#FAFAFA; box-shadow:none">
+	    		<button  ng-click="removeExperience(experience)" class="close">&times;</button>
+
 	    		<label>Company:</label>
-	    		<input type="text" ng-model="experience.company" class="input-xxlarge" required/>[ <a href="" ng-click="removeExperience(experience)">Eliminar</a> ]
+	    		<input type="text" ng-model="experience.company" class="input-xxlarge" required/>
 	    
 	    		<label>Title:</label>
 	    		<input type="text" ng-model="experience.title" class="input-xxlarge" required/>
@@ -41,7 +46,8 @@
 	    		</select>
 	
 				<label>Work description:</label>
-	      		<input type="text" ng-model="experience.description" class="input-xxlarge" size="200" />
+	      		<textarea  ng-model="experience.description" rows="4" cols="70" class="input-xxlarge">
+        </textarea>
       		</div>
 	    </div>
   
