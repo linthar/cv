@@ -3,9 +3,10 @@
 /* Services */
  
 angular.module('cvServices', ['ngResource']).
-    factory('Phone', function($resource){
-  return $resource('phones/:phoneId.json', {}, {
-    query: {method:'GET', params:{phoneId:'phones'}, isArray:true}
-  });
+	factory('Cv', function($resource){
+  		return $resource('cvs/:username.json', {}, {
+
+    		query: {method:'GET', params:{username:'phones'}, isArray:true}
+  		});
 });
  

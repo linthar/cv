@@ -2,20 +2,25 @@
 <form name="cvForm" id="editCvForm" class="form-horizontal"> 
 
 	<fieldset>
-   		<legend><i class="icon-user"></i> Personal infomation</legend>
+   		<legend>
+   			<i class="icon-user"></i> 
+   			Personal infomation 
+   			<span class="pull-right"><a href="#"><i class="icon-chevron-left"></i>volver</a></span>
+   		</legend>
 
-		<img src="img/profile.jpg" class="img-rounded pull-left img-profile" /-->
-   		
-   		<label>Name:</label>
-		<input type="text" ng-model="form.name" class="input-xxlarge" required/>
-		
-   		<label>Title:</label>
-   		<input type="text" ng-model="form.title" size="33" class="input-xxlarge" required/>  
-		    
-   		<label>Summary:</label>
-		<textarea ng-model="form.summary" rows="4" cols="70" class="input-xxlarge">
-        </textarea>
-</textarea>
+<!--
+		<img src="img/profile.jpg" class="img-rounded pull-left img-profile" />
+-->
+		<section style="padding-left:5px">
+	   		<label>Name:</label>
+			<input type="text" ng-model="form.name" class="input-xxlarge" required/>
+			
+	   		<label>Title:</label>
+	   		<input type="text" ng-model="form.title" size="33" class="input-xxlarge" required/>  
+			    
+	   		<label>Summary:</label>
+			<textarea ng-model="form.summary" rows="4" cols="70" class="input-xxlarge"></textarea>
+		</section>
 
 	</fieldset>
     
@@ -24,7 +29,7 @@
 
 	    <div ng-repeat="experience in form.experienceList">
     		
-    		<div class="well span8" style="background-color:#FAFAFA; box-shadow:none; padding-top:10px">
+    		<div class="well" style="background-color:#FAFAFA; box-shadow:none; padding-top:10px">
 	    		<button  ng-click="removeExperience(experience)" class="close">&times;</button>
 
 	    		<label>Company:</label>
