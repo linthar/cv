@@ -24,7 +24,7 @@
 
 	    <div ng-repeat="experience in form.experienceList">
     		
-    		<div class="well" style="background-color:#FAFAFA; box-shadow:none; padding-top:10px">
+    		<div class="well span8" style="background-color:#FAFAFA; box-shadow:none; padding-top:10px">
 	    		<button  ng-click="removeExperience(experience)" class="close">&times;</button>
 
 	    		<label>Company:</label>
@@ -47,15 +47,15 @@
 	
 				<label>Work description:</label>
 	      		<textarea  ng-model="experience.description" rows="4" cols="70" class="input-xxlarge">
-        </textarea>
+       			</textarea>
       		</div>
 	    </div>
-  
-  		<hr/>
- 		<button ng-click="cancel()" ng-disabled="isCancelDisabled()" class="btn">Cancel</button>
-  		<button ng-click="save()" ng-disabled="isSaveDisabled()" class="btn btn-primary">Save</button>
   		
   	</fieldset>
+
+  	<hr>
+ 	<button ng-click="cancel()" ng-disabled="isCancelDisabled()" class="btn">Cancel</button>	
+  	<button ng-click="save()" ng-disabled="isSaveDisabled()" class="btn btn-primary">Save</button>
 </form>
 
 
