@@ -5,6 +5,11 @@ body {
   padding-top: 0;
 }
 
+hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 input {
 	height: 30px !important;	
 }
@@ -21,10 +26,37 @@ label {
 /**
  * Layout
  */
+.menu {
+	position: fixed; 
+	top: 0; 
+	padding-top: 10px;
+	height: 30px;
+	width: 100%;
+	box-shadow: 1px -4px 12px #222222;
+	background-color: #1B1B1B;
+    background-image: linear-gradient(to bottom, #222222, #111111)
+}
+.menu ul {
+	list-style: none;
+}
+.menu li {
+	float: left;
+	color: white;
+	margin-right: 40px;
+}
+.menu li a {
+	color: white;
+}
+.menu li a:hover {
+	color: #0088CC;
+}
+
 .content {
+	padding-top: 30px;
 	background-color: white;
     box-shadow: 0 1px 5px #777777;
 }
+
 
 
 
